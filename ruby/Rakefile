@@ -110,7 +110,7 @@ namespace :build do
 
   # is done by the code above now
   desc "Link all the necessary source files into the ext directory"
-  task :link_files do
+  task :link_files => SRC do
     p 'Files linked'
   end
 
