@@ -1,5 +1,5 @@
 unless File.exists?('global.h')
-  command 'cd .. && rake build:link_files'
+  system 'cd .. && rake build:link_files'
 end
 
 # extconf.rb for Ferret extensions
