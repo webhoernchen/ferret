@@ -1,3 +1,7 @@
+unless File.exists?('global.h')
+  command 'cd .. && rake build:link_files'
+end
+
 # extconf.rb for Ferret extensions
 if (/mswin/ =~ RUBY_PLATFORM) and ENV['make'].nil?
   require 'mkmf'

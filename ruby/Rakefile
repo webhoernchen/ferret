@@ -108,6 +108,12 @@ namespace :build do
     end
   end
 
+  # is done by the code above now
+  desc "Link all the necessary source files into the ext directory"
+  task :link_files do
+    p 'Files linked'
+  end
+
   desc "Build the extension (ferret_ext.so). You'll need a C compiler and Make."
   task :compile => ["ext/#{EXT}"] + SRC
 
